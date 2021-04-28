@@ -1,0 +1,33 @@
+var iFileName = "Eberron_Rising.js";
+RequiredSheetVersion(13);
+// This file adds the content from the Eberron: Rising From The Last War
+
+// The warforged
+RaceList["warforged"] = {
+	regExpSearch : /^(?=.*warforged),
+	name : "Warforged (ERFTLW)",
+	sortname : "Warforged (ERFTLW)",
+	plural : "Warforged (ERFTLW)",
+	size : 3,
+	speed : {
+		walk : { spd : 30, enc : 20 }
+	},
+	languageProfs : ["Common", 1],
+	toolProfs : [["Any tool", 1]],
+	skillstxt : "Choose any one skill and any one tool",
+	savetxt : {
+		text : ["Magic can't put me to sleep, don't need to eat, drink, breathe or sleep"],
+		immune : ["disease", "exhaustion from lack of rest"],
+		adv_vs : ["poison"]
+	},
+	dmgres : ["Poison"],
+	age : " are created as adults and will only start to show signs of physical deterioration after 150 years, but have no further aging effects",
+	height : " stand between 6 and 7 feet tall (5'10\" + 2d6\")",
+	weight : " weigh around 300 lb (270 + 2d6 \xD7 4 lb)",
+	heightMetric : " stand between 1,8 and 2,1 metres tall (178 + 5d6 cm)",
+	weightMetric : " weigh around 135 kg (125 + 5d6 \xD7 8 / 10 kg)",
+	scorestxt : "+2 Constitution and +1 to one other ability scores of my choice",
+	scores : [0, 0, 2, 0, 0, 0],
+	trait : "Warforged (+2 Constitution and +1 to one other abilit" + (typePF ? "ies" : "y scores of my choice") + ")\nWarforged Resilience: I do not need to sleep, eat, drink, or breathe.\nSentry's Rest: To benefit from a long rest, I need to enter an inactive state for 6 hours, during which I am not rendered unconscious and can see and hear as normal.\nIntegrated Protection: My AC increases by 1. I can use a shield.\nIntegrated Tool: I have expertise with one tool and it is integrated into my body.",
+	}]
+};
